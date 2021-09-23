@@ -3,10 +3,10 @@ import React from 'react';
 import { ListOfCategories } from './Componets/ListOFCategories';
 import { GlobalStyle } from './styles/GlobalStyles';
 
-import { ListOfPhotosCards } from './Componets/ListOfPhotoCards';
+import { ListOfPhotoCards } from './Componets/ListOfPhotoCards';
 import { Logo } from './Componets/Logo';
 
-const App = () => {
+export const App = () => {
     return (
 
         <div>
@@ -15,9 +15,7 @@ const App = () => {
             
             <ListOfCategories />
            
-            <ListOfPhotosCards/>
+            <ListOfPhotoCards categoryId={1}/>
         </div>
     )
 }
-
-export default App

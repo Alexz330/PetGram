@@ -9,6 +9,8 @@ const useCategoriesData= () =>{
 
   
   useEffect(function () {
+   
+
     setLoading(true)
     fetch('https://petgram-server-24iykciv5.now.sh/categories')
       .then(res => res.json())

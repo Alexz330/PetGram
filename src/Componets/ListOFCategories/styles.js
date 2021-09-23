@@ -29,7 +29,7 @@ export const List = styled.ul`
     top: -20px;
     transform: scale(.5);
     z-index: 1;
-    ${fadeIn('0.2', 'ease-in')}
+    ${fadeIn('0.1', 'ease-in')}
     `
   }
  

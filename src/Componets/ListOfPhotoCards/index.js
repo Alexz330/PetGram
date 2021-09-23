@@ -1,13 +1,24 @@
+
 import React from "react";
+
 import { PhotoCard } from "../PhotoCard";
+import { useGetPhotos } from "../../hoc/whithPhotos";
 
+  export const ListOfPhotoCards = ({ categoryId }) => {
 
-export const ListOfPhotosCards = () =>{
-    return(
-        <ul>
-            {
-                [1,2,3,4,5].map(id => <PhotoCard key={id}/>)
-            }
-        </ul>
-    );
-}
+    
+    const { loading, error, data } = useGetPhotos(categoryId)
+  
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>error...</p>
+  
+    return (
+      <ul>
+        {data.photos.map((photo) => (
+          <PhotoCard key={photo.id} id={photo.id} {...photo} />
+        ))}
+      </ul>
+  
+    )
+  }
+  
